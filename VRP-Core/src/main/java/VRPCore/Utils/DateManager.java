@@ -2,7 +2,7 @@ package VRPCore.Utils;
 
 import VRPCore.VRPCore;
 
-public class DateManager {
+public class DateManager implements Runnable {
     private final VRPCore core;
     private String[] daysOfWeek = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
     private String[] Months = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
@@ -62,4 +62,11 @@ public class DateManager {
         return index;
     }
 
+    // This method will run once every day at exactly midnight (18000 Ticks)
+    @Override
+    public void run() {
+        // Do daily checks here
+
+        core.JobPaymentHandler.Daily();
+    }
 }

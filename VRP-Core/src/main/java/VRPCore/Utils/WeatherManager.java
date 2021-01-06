@@ -1,4 +1,4 @@
-package VRPCore.Runnables;
+package VRPCore.Utils;
 
 import VRPCore.Enums.WeatherType;
 import VRPCore.VRPCore;
@@ -29,12 +29,6 @@ public class WeatherManager {
 
         for(int i = 1; i <= 7; i++){
             futureForecast.add(getRandomWeatherType());
-        }
-
-        core.getLogger().warning("futureForcast#size(): " + futureForecast.size());
-
-        for(int i = 0; i < futureForecast.size(); i++){
-            core.getLogger().warning("Weather in : " + i + " days: " + futureForecast.get(i).toString());
         }
     }
 

@@ -9,3 +9,4 @@ softdepend: [LuckPerms]
 commands:
   /es:
   cinematic:
+  forecast:

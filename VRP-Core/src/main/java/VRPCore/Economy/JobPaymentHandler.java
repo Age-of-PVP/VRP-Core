@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.logging.Level;
 
-public class JobPaymentHandler implements Runnable {
+public class JobPaymentHandler {
     private final VRPCore core;
 
     public JobPaymentHandler(VRPCore _core){
@@ -20,8 +20,7 @@ public class JobPaymentHandler implements Runnable {
         this.core.getLogger().warning("New Instance of JobPaymentHandler Created");
     }
 
-    @Override
-    public void run() {
+    public void Daily() {
         // If the current day is thursday
         this.core.getLogger().warning("JobPaymentHandler Ran");
 

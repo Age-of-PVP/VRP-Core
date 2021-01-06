@@ -2,6 +2,8 @@ package VRPCore.Runnables;
 
 import VRPCore.Economy.JobPaymentHandler;
 import VRPCore.Listeners.LogonListener;
+import VRPCore.Utils.DateManager;
+import VRPCore.Utils.WeatherManager;
 import VRPCore.VRPCore;
 
 public class StartupRunnable implements Runnable{
@@ -12,9 +14,11 @@ public class StartupRunnable implements Runnable{
 
     @Override
     public void run() {
-        core.JobPaymentHandle = core.getServer().getScheduler().scheduleSyncRepeatingTask(core, new JobPaymentHandler(core), 0L, 24000);
+        core.DateManagerHandle = core.getServer().getScheduler().scheduleSyncRepeatingTask(core, core.DateManager, 0L, 24000);
 
         core.getServer().getScheduler().scheduleSyncRepeatingTask(core, new TimeCheckRunnable(core), 0, 20);
+
+        core.WeatherManager = new WeatherManager(core);
 
         // Set time to day
         core.getServer().getWorld("OLD").setFullTime(16299768000L + 18000L);

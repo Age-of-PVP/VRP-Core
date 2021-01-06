@@ -4,12 +4,14 @@ import VRPCore.Cinematics.Cinematic;
 import VRPCore.Cinematics.CinematicManager;
 import VRPCore.Commands.CinematicCommand;
 import VRPCore.Commands.EditorStick;
+import VRPCore.Commands.ForecastCommand;
 import VRPCore.Economy.JobPaymentHandler;
 import VRPCore.Events.EditorStickEvents;
 import VRPCore.Runnables.StartupRunnable;
 import VRPCore.Runnables.TimeCheckRunnable;
 import VRPCore.TabCompleters.CinematicTabCompleter;
 import VRPCore.Utils.DateManager;
+import VRPCore.Utils.WeatherManager;
 import me.filoghost.chestcommands.ChestCommands;
 import me.filoghost.chestcommands.Permissions;
 import me.filoghost.chestcommands.api.ChestCommandsAPI;
@@ -29,12 +31,14 @@ public class VRPCore extends JavaPlugin {
     public LightManager lightManager = new LightManager();
     public CinematicManager CinematicManager = new CinematicManager(this);
     public DateManager DateManager = new DateManager(this);
+    public WeatherManager WeatherManager;
+    public JobPaymentHandler JobPaymentHandler = new JobPaymentHandler(this);
 
     public Economy economy;
     public Permission permissions;
     public Chat chat;
 
-    public int JobPaymentHandle;
+    public int DateManagerHandle;
 
     @Override
     public void onEnable(){
@@ -50,7 +54,7 @@ public class VRPCore extends JavaPlugin {
 
         BukkitScheduler scheduler = getServer().getScheduler();
 
-        scheduler.scheduleSyncDelayedTask(this, new StartupRunnable(this), 400);
+        scheduler.scheduleSyncDelayedTask(this, new StartupRunnable(this), 40);
     }
 
     @Override
@@ -87,6 +91,7 @@ public class VRPCore extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new EditorStickEvents(this), this);
         this.getCommand("cinematic").setTabCompleter(new CinematicTabCompleter(this));
         this.getCommand("cinematic").setExecutor(new CinematicCommand(this));
+        this.getCommand("forecast").setExecutor(new ForecastCommand(this));
     }
 
 }

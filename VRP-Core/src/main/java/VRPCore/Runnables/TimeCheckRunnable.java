@@ -22,11 +22,11 @@ public class TimeCheckRunnable implements Runnable {
     public void run() {
         if(world.getFullTime() - 20L != lastTime && !firstRun){
             core.getLogger().warning("ERROR: Possible plugin & day/night cycle de-sync! Attempting to fix! {lastTime:" + lastTime + "} {fullWorldTime:" + world.getFullTime() + "} {worldTime: " + world.getTime() + "}");
-            core.getServer().getScheduler().cancelTask(core.JobPaymentHandle);
+            core.getServer().getScheduler().cancelTask(core.DateManagerHandle);
 
             long timeToDelay = 18000L - world.getTime();
             core.getLogger().warning("Restarting JobPaymentHandler in " + timeToDelay + " ticks.");
-            core.JobPaymentHandle = core.getServer().getScheduler().scheduleSyncRepeatingTask(core, new JobPaymentHandler(core), timeToDelay, 24000);
+            core.DateManagerHandle = core.getServer().getScheduler().scheduleSyncRepeatingTask(core, core.DateManager, timeToDelay, 24000);
         }
         firstRun = false;
         lastTime = world.getFullTime();
