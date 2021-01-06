@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: 
+Class-Path: genson-1.6.jar item-nbt-api-plugin-2.6.0.jar
+
