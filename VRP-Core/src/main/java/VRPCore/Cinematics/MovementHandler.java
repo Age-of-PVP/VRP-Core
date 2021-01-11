@@ -92,11 +92,11 @@ public class MovementHandler extends BukkitRunnable {
 
         int ttps = ((cinematic.Duration  * 20) / (cinematic.KeyPoints.size() - 1));
         for(int i = 0; i < cinematic.KeyPoints.size(); i++){
-            dataPointsX[i] = new Data(ttps * i, cinematic.KeyPoints.get(i).getX());
-            dataPointsY[i] = new Data(ttps * i, cinematic.KeyPoints.get(i).getY());
-            dataPointsZ[i] = new Data(ttps * i, cinematic.KeyPoints.get(i).getZ());
-            dataPointsYaw[i] = new Data(ttps * i, cinematic.KeyPoints.get(i).getYaw());
-            dataPointsPitch[i] = new Data(ttps * i, cinematic.KeyPoints.get(i).getPitch());
+            dataPointsX[i] = new Data(ttps * i, cinematic.KeyPoints.get(i).x);
+            dataPointsY[i] = new Data(ttps * i, cinematic.KeyPoints.get(i).y);
+            dataPointsZ[i] = new Data(ttps * i, cinematic.KeyPoints.get(i).z);
+            dataPointsYaw[i] = new Data(ttps * i, cinematic.KeyPoints.get(i).yaw);
+            dataPointsPitch[i] = new Data(ttps * i, cinematic.KeyPoints.get(i).pitch);
             player.sendMessage("X: " + dataPointsPitch[i].x + " | Y: " + dataPointsPitch[i].y);
         }
 
@@ -155,7 +155,6 @@ public class MovementHandler extends BukkitRunnable {
                     PreCalculations();
                 }
             }
-
         }
     }
 

@@ -1,5 +1,6 @@
 package VRPCore.Economy;
 
+import VRPCore.Interfaces.IDailyRunnable;
 import VRPCore.Models.Player;
 import VRPCore.VRPCore;
 import org.bukkit.ChatColor;
@@ -11,19 +12,17 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.logging.Level;
 
-public class JobPaymentHandler {
+public class JobPaymentHandler implements IDailyRunnable {
     private final VRPCore core;
 
     public JobPaymentHandler(VRPCore _core){
 
         this.core = _core;
-        this.core.getLogger().warning("New Instance of JobPaymentHandler Created");
     }
 
-    public void Daily() {
+    @Override
+    public void daily() {
         // If the current day is thursday
-        this.core.getLogger().warning("JobPaymentHandler Ran");
-
         if(core.DateManager.GetDayOfWeekAsInt() == 4) {
             ArrayList<Player> Players = core.playerManager.Players;
 
@@ -49,5 +48,10 @@ public class JobPaymentHandler {
                 player.sendMessage(ChatColor.RED + "It is now " + core.DateManager.GetDayOfWeek() + ChatColor.YELLOW + " (" + player.getWorld().getTime() + " : " + player.getWorld().getFullTime() + ")");
             }
         }
+    }
+
+    @Override
+    public String getTaskName() {
+        return "JobPaymentHandler";
     }
 }

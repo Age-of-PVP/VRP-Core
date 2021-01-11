@@ -1,7 +1,10 @@
 package VRPCore.Commands;
 
+import VRPCore.Models.Vec5;
 import VRPCore.VRPCore;
 import VRPCore.Cinematics.Cinematic;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.owlike.genson.Genson;
 import com.owlike.genson.GensonBuilder;
 import org.bukkit.ChatColor;
@@ -41,7 +44,7 @@ public class CinematicCommand implements CommandExecutor {
                 sender.sendMessage(ChatColor.GRAY + "Starting Creation of " + ChatColor.GREEN + args[1]);
                 Cinematic tmp = new Cinematic();
                 tmp.Name = args[1];
-                tmp.KeyPoints = new ArrayList<Location>();
+                tmp.KeyPoints = new ArrayList<Vec5>();
                 tmp.Duration = Integer.parseInt(args[2]);
                 tmp.LinkedCinematic = "";
                 tmp.Titles = new String[0];
@@ -52,7 +55,7 @@ public class CinematicCommand implements CommandExecutor {
             if(args.length >= 3){
                 if(args[1].equalsIgnoreCase("add")){
                     Cinematic cinematic = core.CinematicManager.get(args[2]);
-                    cinematic.KeyPoints.add(((Player)sender).getLocation());
+                    cinematic.KeyPoints.add(new Vec5(((Player)sender).getLocation()));
                     sender.sendMessage(ChatColor.GREEN + "Added Location to " + ChatColor.YELLOW + cinematic.Name);
                 }else if(args[1].equalsIgnoreCase("remove")){
                     if(args.length >= 4){
@@ -68,11 +71,11 @@ public class CinematicCommand implements CommandExecutor {
                 sender.sendMessage(ChatColor.RED + "Error. Usuage: /cinematic points add/remove [name] [index (only if removing)]");
             }
         }else if(args[0].equalsIgnoreCase("json")){
-            Genson genson = new GensonBuilder()
-                    .useIndentation(true)
-                    .useConstructorWithArguments(true)
+            Gson gson = new GsonBuilder()
+                    .setPrettyPrinting()
                     .create();
-            sender.sendMessage(genson.serialize(core.CinematicManager.Cinematics.toArray()));
+
+            sender.sendMessage(gson.toJson(core.CinematicManager.Cinematics.toArray()));
         }else if(args[0].equalsIgnoreCase("delete")){
             if(args.length >= 2){
                 Cinematic cinematic = core.CinematicManager.get(args[1]);

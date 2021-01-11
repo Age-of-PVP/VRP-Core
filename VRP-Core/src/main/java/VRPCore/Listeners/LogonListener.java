@@ -24,6 +24,12 @@ public class LogonListener implements Listener {
            jobName = "Cop";
         }};
 
+        if(player.firstLogon){
+            // Play intro cinematic
+        }
+
+        player.firstLogon = false;
+
         event.getPlayer().sendMessage(ChatColor.RED + "Today's Date: " + core.DateManager.GetMonthOfYear() + " " + core.DateManager.GetDayOfMonth() + ", " + core.DateManager.GetYear() + " (A " + core.DateManager.GetDayOfWeek() + ")");
     }
 

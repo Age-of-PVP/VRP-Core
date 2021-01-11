@@ -1,14 +1,25 @@
 package VRPCore.Utils;
 
+import VRPCore.Interfaces.IDailyRunnable;
 import VRPCore.VRPCore;
+
+import java.util.ArrayList;
 
 public class DateManager implements Runnable {
     private final VRPCore core;
     private String[] daysOfWeek = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
     private String[] Months = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+    private ArrayList<IDailyRunnable> DailyTasks = new ArrayList<>();
 
     public DateManager(VRPCore _core){
         this.core = _core;
+    }
+
+    public void RegisterDailyTask(IDailyRunnable task){
+        if(task instanceof IDailyRunnable){
+            core.getLogger().warning("Registered Daily Task: " + task.getTaskName());
+            DailyTasks.add(task);
+        }
     }
 
     public String GetDayOfWeek(){
@@ -65,8 +76,9 @@ public class DateManager implements Runnable {
     // This method will run once every day at exactly midnight (18000 Ticks)
     @Override
     public void run() {
-        // Do daily checks here
-
-        core.JobPaymentHandler.Daily();
+        for(IDailyRunnable task : DailyTasks){
+            core.getLogger().warning("Ran Daily Method for " + task.getTaskName());
+            task.daily();
+        }
     }
 }
