@@ -2,6 +2,7 @@ package VRPCore.Runnables;
 
 import VRPCore.Economy.JobPaymentHandler;
 import VRPCore.VRPCore;
+import org.bukkit.GameRule;
 import org.bukkit.World;
 
 public class TimeCheckRunnable implements Runnable {
@@ -20,7 +21,7 @@ public class TimeCheckRunnable implements Runnable {
 
     @Override
     public void run() {
-        if(world.getFullTime() - 20L != lastTime && !firstRun){
+        if(world.getFullTime() - 20L != lastTime && !firstRun && core.getServer().getWorld("OLD").getGameRuleValue(GameRule.DO_DAYLIGHT_CYCLE)){
             core.getLogger().warning("ERROR: Possible plugin & day/night cycle de-sync! Attempting to fix! {lastTime:" + lastTime + "} {fullWorldTime:" + world.getFullTime() + "} {worldTime: " + world.getTime() + "}");
             core.getServer().getScheduler().cancelTask(core.DateManagerHandle);
 
