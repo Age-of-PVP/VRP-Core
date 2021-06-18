@@ -14,6 +14,8 @@ public class StartupRunnable implements Runnable{
 
     @Override
     public void run() {
+        core.world = core.getServer().getWorld("OLD");
+
         core.DateManagerHandle = core.getServer().getScheduler().scheduleSyncRepeatingTask(core, core.DateManager, 0L, 24000);
 
         core.getServer().getScheduler().scheduleSyncRepeatingTask(core, new TimeCheckRunnable(core), 0, 20);
@@ -24,5 +26,7 @@ public class StartupRunnable implements Runnable{
         core.getServer().getWorld("OLD").setFullTime(16299768000L + 18000L);
 
         core.getServer().getPluginManager().registerEvents(new LogonListener(core), core);
+
+        core.registerTasks();
     }
 }

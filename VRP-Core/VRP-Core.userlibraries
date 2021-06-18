@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="Maven: commons-lang:commons-lang:2.6">
+    <archive path="C:/Users/Erik/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar" />
+  </library>
+  <library name="Maven: com.google.code.gson:gson:2.8.0">
+    <archive path="C:/Users/Erik/.m2/repository/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar" />
+  </library>
+  <library name="Maven: com.google.guava:guava:21.0">
+    <archive path="C:/Users/Erik/.m2/repository/com/google/guava/guava/21.0/guava-21.0.jar" />
+  </library>
+  <library name="Maven: com.github.MilkBowl:VaultAPI:1.7">
+    <archive path="C:/Users/Erik/.m2/repository/com/github/MilkBowl/VaultAPI/1.7/VaultAPI-1.7.jar" />
+  </library>
+  <library name="Maven: com.googlecode.json-simple:json-simple:1.1.1">
+    <archive path="C:/Users/Erik/.m2/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar" />
+  </library>
+  <library name="Maven: org.hamcrest:hamcrest-core:1.1">
+    <archive path="C:/Users/Erik/.m2/repository/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar" />
+  </library>
+  <library name="Maven: org.spigotmc:spigot-api:1.16.4-R0.1-SNAPSHOT">
+    <archive path="C:/Users/Erik/.m2/repository/org/spigotmc/spigot-api/1.16.4-R0.1-SNAPSHOT/spigot-api-1.16.4-R0.1-20210114.220528-50.jar" />
+  </library>
+  <library name="Maven: org.bstats:bstats-bukkit-lite:1.7">
+    <archive path="C:/Users/Erik/.m2/repository/org/bstats/bstats-bukkit-lite/1.7/bstats-bukkit-lite-1.7.jar" />
+  </library>
+  <library name="Maven: org.bukkit:bukkit:1.13.1-R0.1-SNAPSHOT">
+    <archive path="C:/Users/Erik/.m2/repository/org/bukkit/bukkit/1.13.1-R0.1-SNAPSHOT/bukkit-1.13.1-R0.1-20181022.190036-99.jar" />
+  </library>
+  <library name="Maven: org.yaml:snakeyaml:1.26">
+    <archive path="C:/Users/Erik/.m2/repository/org/yaml/snakeyaml/1.26/snakeyaml-1.26.jar" />
+  </library>
+  <library name="Maven: junit:junit:4.10">
+    <archive path="C:/Users/Erik/.m2/repository/junit/junit/4.10/junit-4.10.jar" />
+  </library>
+  <library name="Maven: me.filoghost.chestcommands:chestcommands-api:4.0.3">
+    <archive path="C:/Users/Erik/.m2/repository/me/filoghost/chestcommands/chestcommands-api/4.0.3/chestcommands-api-4.0.3.jar" />
+  </library>
+  <library name="Maven: com.owlike:genson:1.6">
+    <archive path="C:/Users/Erik/.m2/repository/com/owlike/genson/1.6/genson-1.6.jar" />
+  </library>
+  <library name="Maven: de.tr7zw:item-nbt-api-plugin:2.6.0">
+    <archive path="C:/Users/Erik/.m2/repository/de/tr7zw/item-nbt-api-plugin/2.6.0/item-nbt-api-plugin-2.6.0.jar" />
+  </library>
+  <library name="Maven: me.filoghost.updatechecker:updatechecker:1.0.1">
+    <archive path="C:/Users/Erik/.m2/repository/me/filoghost/updatechecker/updatechecker/1.0.1/updatechecker-1.0.1.jar" />
+  </library>
+  <library name="Maven: net.md-5:bungeecord-chat:1.16-R0.3">
+    <archive path="C:/Users/Erik/.m2/repository/net/md-5/bungeecord-chat/1.16-R0.3/bungeecord-chat-1.16-R0.3.jar" />
+  </library>
+  <library name="Maven: me.filoghost.chestcommands:chestcommands-plugin:4.0.3">
+    <archive path="C:/Users/Erik/.m2/repository/me/filoghost/chestcommands/chestcommands-plugin/4.0.3/chestcommands-plugin-4.0.3.jar" />
+  </library>
+  <library name="Maven: me.filoghost.fcommons:fcommons:1.2.4">
+    <archive path="C:/Users/Erik/.m2/repository/me/filoghost/fcommons/fcommons/1.2.4/fcommons-1.2.4.jar" />
+  </library>
+  <library name="Maven: be.maximvdw:MVdWPlaceholderAPI:2.1.1-SNAPSHOT">
+    <archive path="C:/Users/Erik/.m2/repository/be/maximvdw/MVdWPlaceholderAPI/2.1.1-SNAPSHOT/MVdWPlaceholderAPI-2.1.1-20171120.102857-2.jar" />
+  </library>
+  <library name="Maven: org.spigotmc:spigot:1.9" />
+</eclipse-userlibraries>
+

@@ -29,5 +29,7 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.bstats:bstats-bukkit-lite:1.7" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: me.filoghost.updatechecker:updatechecker:1.0.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: me.filoghost.fcommons:fcommons:1.2.4" level="project" />
+    <orderEntry type="library" name="Maven: be.maximvdw:MVdWPlaceholderAPI:2.1.1-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: org.spigotmc:spigot:1.9" level="project" />
   </component>
 </module>

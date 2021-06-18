@@ -13,7 +13,7 @@ public class DateManager implements Runnable {
     private ArrayList<IDailyRunnable> DailyTasks = new ArrayList<>();
     private ArrayList<IWeeklyRunnable> WeeklyTasks = new ArrayList<IWeeklyRunnable>();
 
-    private long lastDate;
+    private long lastDate = 0;
 
     public final long MINECRAFT_DAY = 24000;
     public final long MINECRAFT_WEEK = MINECRAFT_DAY * 7;
@@ -23,7 +23,6 @@ public class DateManager implements Runnable {
 
     public DateManager(VRPCore _core){
         this.core = _core;
-        lastDate = core.getServer().getWorld("OLD").getFullTime();
     }
 
     public boolean RegisterDailyTask(IDailyRunnable task){
@@ -31,7 +30,7 @@ public class DateManager implements Runnable {
             core.getLogger().warning("Registered Daily Task: " + task.getTaskName());
             DailyTasks.add(task);
             return true;
-        }else {
+        } else {
             core.getLogger().severe("Tried to register daily task " + task.getTaskName() + " however it is not of type IDailyRunnable");
             return false;
         }
@@ -145,5 +144,6 @@ public class DateManager implements Runnable {
         if(numDays % (365 * 10) == 0);
 
         numDays++;
+        lastDate = core.getServer().getWorld("OLD").getFullTime();
     }
 }
