@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="VRP-Core:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="185313cc-eec3-4a97-bf8d-591da824fd7d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/VRP_Core_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__be_maximvdw_MVdWPlaceholderAPI_2_1_1_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_MilkBowl_VaultAPI_1_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_21_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_json_simple_json_simple_1_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_owlike_genson_1_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__de_tr7zw_item_nbt_api_plugin_2_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__me_filoghost_chestcommands_chestcommands_api_4_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__me_filoghost_chestcommands_chestcommands_plugin_4_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__me_filoghost_fcommons_fcommons_1_2_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__me_filoghost_updatechecker_updatechecker_1_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_16_R0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bstats_bstats_bukkit_lite_1_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bukkit_bukkit_1_13_1_R0_1_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_1_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_spigotmc_spigot_api_1_16_4_R0_1_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_26.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.core.resources.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VRP-Core.eml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VRP-Core.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VRP-Core.userlibraries" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Cinematics/Cinematic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Cinematics/CinematicManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Cinematics/MovementHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Commands/CinematicCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Commands/EditorStick.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Commands/ForecastCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Commands/WantedCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Economy/JobPaymentHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Enums/FeeInterval.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Enums/FeeTypes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Enums/WeatherType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Events/EditorStickEvents.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Interfaces/IDailyRunnable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Interfaces/IStorable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Interfaces/IWeeklyRunnable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/LightManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Listeners/LogonListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Listeners/StatListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Models/EditorStickMode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Models/Fee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Models/Intersection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Models/Job.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Models/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Models/Vec5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Placeholders/WantedLevelPlaceholder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/PlayerManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Runnables/StartupRunnable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Runnables/TimeCheckRunnable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/ScaffoldedCommands/Forecast.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/TabCompleters/CinematicTabCompleter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Utils/DateManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Utils/IO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/Utils/WeatherManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/VRPCore/VRPCore.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/VRP-Core-1.0-SNAPSHOT-VRP-Core" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
+  <component name="ProjectId" id="1l4bBcYYQcQHGGu4bXqVGJ4aBVU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="compactDirectories" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15136719" />
+    <property name="project.structure.side.proportion" value="0.24654378" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="K:\Users\Erik\IdeaProjects\VRP-Core\src\main\java\VRPCore\Commands" />
+      <recent name="K:\Users\Erik\IdeaProjects\VRP-Core\src\main\java\VRPCore\TabCompleters" />
+      <recent name="K:\Users\Erik\IdeaProjects\VRP-Core\src\main\java\VRPCore\Cinematics" />
+      <recent name="C:\Users\Erik\IdeaProjects\VRP-Core\src\main\java\VRP\Core" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="185313cc-eec3-4a97-bf8d-591da824fd7d" name="Default Changelist" comment="" />
+      <created>1606859175588</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606859175588</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

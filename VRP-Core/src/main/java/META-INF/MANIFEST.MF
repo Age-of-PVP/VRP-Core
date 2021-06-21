@@ -1,4 +1,0 @@
-Manifest-Version: 1.0
-Class-Path: ChestCommands.jar item-nbt-api-plugin-2.6.0.jar genson-1.6.j
- ar
-
