@@ -1,6 +1,6 @@
 package VRPCore.Cinematics
 
-import VRPCore
+import VRPCore.VRPCore
 import org.bukkit.ChatColor
 import org.bukkit.GameMode
 import org.bukkit.Location
@@ -67,8 +67,8 @@ class MovementHandler(_player: Player, _cinematic: Cinematic, _core: VRPCore) : 
             dataPointsX[i] = Data((ttps * i).toDouble(), cinematic.KeyPoints!![i].x)
             dataPointsY[i] = Data((ttps * i).toDouble(), cinematic.KeyPoints!![i].y)
             dataPointsZ[i] = Data((ttps * i).toDouble(), cinematic.KeyPoints!![i].z)
-            dataPointsYaw[i] = Data((ttps * i).toDouble(), cinematic.KeyPoints!![i].yaw)
-            dataPointsPitch[i] = Data((ttps * i).toDouble(), cinematic.KeyPoints!![i].pitch)
+            dataPointsYaw[i] = Data((ttps * i).toDouble(), cinematic.KeyPoints!![i].yaw.toDouble())
+            dataPointsPitch[i] = Data((ttps * i).toDouble(), cinematic.KeyPoints!![i].pitch.toDouble())
             player.sendMessage("X: " + dataPointsPitch[i]!!.x + " | Y: " + dataPointsPitch[i]!!.y)
         }
         for (i in 0 until cinematic.Duration * 20) {
@@ -101,7 +101,7 @@ class MovementHandler(_player: Player, _cinematic: Cinematic, _core: VRPCore) : 
     override fun run() {
         player.teleport(
             Location(
-                player.world, allXPoints[tick], allYPoints[tick], allZPoints[tick],
+                player.world, allXPointsD[tick], allYPointsD[tick], allZPointsD[tick],
                 allYawPoints[tick]!!, allPitchPoints[tick]!!
             )
         )
@@ -114,7 +114,7 @@ class MovementHandler(_player: Player, _cinematic: Cinematic, _core: VRPCore) : 
                 player.sendMessage(ChatColor.YELLOW.toString() + "Finished Cinematic: " + ChatColor.LIGHT_PURPLE + cinematic.Name)
                 cancel()
             } else {
-                val newCinematic: Cinematic = core.CinematicManager.get(cinematic.LinkedCinematic)
+                val newCinematic: Cinematic? = core.CinematicManager.get(cinematic.LinkedCinematic)
                 if (newCinematic == null) {
                     player.teleport(startingLocation)
                     player.isFlying = wasFlying
@@ -132,7 +132,7 @@ class MovementHandler(_player: Player, _cinematic: Cinematic, _core: VRPCore) : 
         }
     }
 
-    internal class Data(var x: Double, var y: Double)
+    class Data(var x: Double, var y: Double)
     companion object {
         fun interpolate(start: Double, end: Double, count: Int): DoubleArray {
             require(count >= 2) { "interpolate: illegal count!" }

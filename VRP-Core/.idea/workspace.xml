@@ -5,7 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39304f1a-83e6-4a98-9e45-5e88f587d776" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/VRP-Core.VRP-Core.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/VRP-Core.VRP-Core.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/TabCompletions/CinematicTabCompleter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VRP-Core/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/VRP-Core/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Cinematics/Cinematic.kt" beforeDir="false" afterPath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Cinematics/Cinematic.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Cinematics/CinematicManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Cinematics/CinematicManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Cinematics/MovementHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Cinematics/MovementHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Commands/CinematicCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Commands/CinematicCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Commands/EditorStick.kt" beforeDir="false" afterPath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Commands/EditorStick.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Commands/WantedCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Commands/WantedCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Economy/JobPaymentHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Economy/JobPaymentHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/VRPCore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/VRPCore.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +43,13 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -41,6 +62,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

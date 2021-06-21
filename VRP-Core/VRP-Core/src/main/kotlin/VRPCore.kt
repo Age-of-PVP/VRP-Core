@@ -9,7 +9,7 @@ import VRPCore.Commands.WantedCommand;
 import VRPCore.Economy.JobPaymentHandler;
 import VRPCore.Events.EditorStickEvents;
 import VRPCore.Interfaces.IStorable;
-import VRPCore.Models.Player;
+import VRPCore.Models.VRPlayer
 import VRPCore.Placeholders.WantedLevelPlaceholder;
 import VRPCore.Runnables.StartupRunnable;
 import VRPCore.Runnables.TimeCheckRunnable;
@@ -19,9 +19,7 @@ import VRPCore.Utils.WeatherManager;
 import be.maximvdw.placeholderapi.PlaceholderAPI;
 import be.maximvdw.placeholderapi.PlaceholderReplaceEvent;
 import be.maximvdw.placeholderapi.PlaceholderReplacer;
-import me.filoghost.chestcommands.ChestCommands;
-import me.filoghost.chestcommands.Permissions;
-import me.filoghost.chestcommands.api.ChestCommandsAPI;
+import me.clip.placeholderapi.PlaceholderAPI
 import net.milkbowl.vault.chat.Chat;
 import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.permission.Permission;
@@ -65,25 +63,25 @@ class VRPCore : JavaPlugin() {
         if (Bukkit.getPluginManager().isPluginEnabled("MVdWPlaceholderAPI") && false) { // @TODO: <- REMOVE THE && FALSE
             PlaceholderAPI.registerPlaceholder(this, "wantedString", object : PlaceholderReplacer() {
                 fun onPlaceholderReplace(e: PlaceholderReplaceEvent): String {
-                    val player: Player = playerManager.GetPlayer(e.getPlayer().getUniqueId())
+                    val player: VRPlayer = playerManager.GetPlayer(e.getPlayer().getUniqueId())
                     return player.getWantedDisplay()
                 }
             })
             PlaceholderAPI.registerPlaceholder(this, "wantedLevel", object : PlaceholderReplacer() {
                 fun onPlaceholderReplace(e: PlaceholderReplaceEvent): String {
-                    val player: Player = playerManager.GetPlayer(e.getPlayer().getUniqueId())
+                    val player: VRPlayer = playerManager.GetPlayer(e.getPlayer().getUniqueId())
                     return Integer.toString(player.getWantedLevel())
                 }
             })
             PlaceholderAPI.registerPlaceholder(this, "job", object : PlaceholderReplacer() {
                 fun onPlaceholderReplace(e: PlaceholderReplaceEvent): String {
-                    val player: Player = playerManager.GetPlayer(e.getPlayer().getUniqueId())
+                    val player: VRPlayer = playerManager.GetPlayer(e.getPlayer().getUniqueId())
                     return player.Job.jobName
                 }
             })
             PlaceholderAPI.registerPlaceholder(this, "salary", object : PlaceholderReplacer() {
                 fun onPlaceholderReplace(e: PlaceholderReplaceEvent): String {
-                    val player: Player = playerManager.GetPlayer(e.getPlayer().getUniqueId())
+                    val player: VRPlayer = playerManager.GetPlayer(e.getPlayer().getUniqueId())
                     return java.lang.Double.toString(player.Job.weeklySalary)
                 }
             })
@@ -125,7 +123,7 @@ class VRPCore : JavaPlugin() {
             return false
         }
         val rsp: RegisteredServiceProvider<Economy> =
-            getServer().getServicesManager().getRegistration(Economy::class.java)
+            getServer().getServicesManager().getRegistration(Economy::class.java) as RegisteredServiceProvider<Economy>
         if (rsp == null) {
             this.getLogger().severe("Failed to obtain instance of RegisteredServiceProvider<Economy> from Vault!")
             return false
@@ -150,17 +148,17 @@ class VRPCore : JavaPlugin() {
     }
 
     fun registerCmds() {
-        this.getCommand("/es").setExecutor(EditorStick(this))
+        this.getCommand("/es")!!.setExecutor(EditorStick(this))
         getServer().getPluginManager().registerEvents(EditorStickEvents(this), this)
-        this.getCommand("cinematic").setTabCompleter(CinematicTabCompleter(this))
-        this.getCommand("cinematic").setExecutor(CinematicCommand(this))
+        this.getCommand("cinematic")!!.setTabCompleter(CinematicTabCompleter(this))
+        this.getCommand("cinematic")!!.setExecutor(CinematicCommand(this))
         //this.getCommand("forecast").setExecutor(new ForecastCommand(this));
-        this.getCommand("wanted").setExecutor(WantedCommand(this))
+        this.getCommand("wanted")!!.setExecutor(WantedCommand(this))
     }
 
     fun registerTasks() {
         DateManager.RegisterDailyTask(playerManager)
-        DateManager.RegisterDailyTask(WeatherManager)
+        DateManager.RegisterDailyTask(WeatherManager!!)
         DateManager.RegisterDailyTask(JobPaymentHandler)
     }
 

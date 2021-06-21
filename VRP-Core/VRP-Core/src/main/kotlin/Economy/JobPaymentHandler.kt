@@ -1,7 +1,7 @@
 package VRPCore.Economy
 
 import VRPCore.Interfaces.IDailyRunnable
-import VRPCore.Models.Player
+import VRPCore.Models.VRPlayer
 import VRPCore.VRPCore
 import org.bukkit.ChatColor
 import org.bukkit.OfflinePlayer
@@ -14,14 +14,19 @@ class JobPaymentHandler(private val core: VRPCore) : IDailyRunnable {
     override fun daily() {
         // If the current day is thursday
         if (core.DateManager.GetDayOfWeekAsInt() == 4) {
-            val Players: ArrayList<Player> = core.playerManager.Players
+            if(core.economy == null){
+                core.logger.severe("JobPaymentHandler attempted to pay players but eceonomy is not set up!");
+                return;
+            }
+
+            val Players: ArrayList<VRPlayer> = core.playerManager.Players
             for (i in Players.indices) {
                 val player = Players[i]
-                val bukkitPlayer: OfflinePlayer = core.server.getOfflinePlayer(player.UUID)
-                core.economy.depositPlayer(bukkitPlayer, player.Job.weeklySalary)
-                val onlinePlayer: Player = core.server.getPlayer(player.UUID)
+                val bukkitPlayer: OfflinePlayer = core.server.getOfflinePlayer(player.UUID!!)
+                core.economy!!.depositPlayer(bukkitPlayer, player.Job!!.weeklySalary)
+                val onlinePlayer: Player = core.server.getPlayer(player.UUID!!)!!
                 if (onlinePlayer != null) {
-                    onlinePlayer.sendMessage(ChatColor.GREEN.toString() + "Your weekly salary of " + ChatColor.YELLOW + "$" + player.Job.weeklySalary + " " + ChatColor.GREEN + " has been deposited!")
+                    onlinePlayer.sendMessage(ChatColor.GREEN.toString() + "Your weekly salary of " + ChatColor.YELLOW + "$" + player.Job!!.weeklySalary + " " + ChatColor.GREEN + " has been deposited!")
                     onlinePlayer.playSound(onlinePlayer.location, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 0.8f, 1.0f)
                 }
                 core.logger.log(Level.INFO, "Updated Balance of " + bukkitPlayer.name)

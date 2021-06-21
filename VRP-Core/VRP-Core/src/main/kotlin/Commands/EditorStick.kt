@@ -1,7 +1,6 @@
 package VRPCore.Commands
 
 import VRPCore.Enums.EditorStickMode
-import VRPCore.Models.EditorStickMode
 import VRPCore.VRPCore
 import de.tr7zw.nbtapi.NBTItem
 import org.bukkit.ChatColor
@@ -64,13 +63,14 @@ class EditorStick(var plugin: VRPCore) : CommandExecutor {
                             }
                         } else if (args[0].equals("lights", ignoreCase = true)) {
                             if (player.hasPermission("vrpcore.es.light")) {
+                                player.sendMessage("This section has been disabled as LightManager is no longer present in VRPCore");
                                 when (args[1].toLowerCase()) {
                                     "on" -> {
                                         player.sendMessage("3")
-                                        player.sendMessage("" + plugin.lightManager.DayNightLamps.size())
-                                        plugin.lightManager.TurnOnLights()
+                                        //player.sendMessage("" + plugin.lightManager.DayNightLamps.size())
+                                        //plugin.lightManager.TurnOnLights()
                                     }
-                                    "off" -> plugin.lightManager.TurnOffLights()
+                                    //"off" -> plugin.lightManager.TurnOffLights()
                                 }
                             } else player.sendMessage(ChatColor.RED.toString() + "Missing Permission")
                         }

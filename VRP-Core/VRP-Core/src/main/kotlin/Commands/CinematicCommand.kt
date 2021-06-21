@@ -39,8 +39,8 @@ class CinematicCommand(var core: VRPCore) : CommandExecutor {
                 tmp.KeyPoints = ArrayList()
                 tmp.Duration = args[2].toInt()
                 tmp.LinkedCinematic = ""
-                tmp.Titles = arrayOfNulls(0)
-                tmp.Subtitles = arrayOfNulls(0)
+                tmp.Titles = arrayOf<String>();
+                tmp.Subtitles = arrayOf<String>();
                 core.CinematicManager.Cinematics!!.add(tmp)
             }
         } else if (args[0].equals("points", ignoreCase = true)) {

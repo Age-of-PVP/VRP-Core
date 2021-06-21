@@ -1,6 +1,5 @@
 package VRPCore.Cinematics;
 
-import VRPCore
 import VRPCore.Interfaces.IStorable
 import VRPCore.Utils.IO
 import VRPCore.VRPCore
@@ -26,7 +25,7 @@ class CinematicManager(private val core: VRPCore) : IStorable {
         val cinematic = get(CinematicName)
         if (cinematic != null) {
             val runnable: BukkitTask =
-                MovementHandler(player, core.CinematicManager[CinematicName], core).runTaskTimer(core, 0, 1)
+                MovementHandler(player, core.CinematicManager[CinematicName]!!, core).runTaskTimer(core, 0, 1)
             return true
         }
         player.sendMessage(ChatColor.RED.toString() + "Failed to find Cinematic called " + ChatColor.YELLOW + CinematicName)
@@ -42,7 +41,7 @@ class CinematicManager(private val core: VRPCore) : IStorable {
         return null
     }
 
-    fun save() {
+    override fun save() {
         try {
             val jsonFile = File(CinematicsDirectory)
             if (!jsonFile.exists()) {
@@ -55,7 +54,7 @@ class CinematicManager(private val core: VRPCore) : IStorable {
         }
     }
 
-    fun load() {
+    override fun load() {
         try {
             val directory = File(CinematicsDir)
             if (!directory.exists()) {
