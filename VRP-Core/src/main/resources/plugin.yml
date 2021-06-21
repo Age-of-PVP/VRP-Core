@@ -4,8 +4,8 @@ authors: [wickedizerd, goldminer931]
 main: VRPCore.VRPCore
 api-version: 1.17
 description: Velocity Role Playing Core Plugin
-depend: []
-softdepend: [Vault, LuckPerms, MVdWPlaceholderAPI, PlaceholderAPI]
+depend: [Vault]
+softdepend: [LuckPerms, MVdWPlaceholderAPI, PlaceholderAPI]
 commands:
   /es:
   cinematic:

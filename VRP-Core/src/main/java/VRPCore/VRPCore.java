@@ -112,13 +112,16 @@ public class VRPCore extends JavaPlugin {
 			});
         }
         
-        // TAB Placeholders
-        if(Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI")) {
-        	new WantedLevelPlaceholder(this).register();
-        }
+        // @TODO: REMOVE COMMENTS
+        // TAB Placeholders 
+        //if(Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI")) {
+        //	new WantedLevelPlaceholder(this).register();
+        //}
         
-        setupChat();
-        setupPermissions();
+        if(!setupChat())
+        	getLogger().severe("Failed to setup chat");
+        if(!setupPermissions())
+        	getLogger().severe("Failed to permissions chat");
 
         commandHandler = new CommandHandler<VRPCore>(this, "VRPCore.ScaffoldedCommands");
         registerCmds();
@@ -165,12 +168,16 @@ public class VRPCore extends JavaPlugin {
 
     private boolean setupChat() {
         RegisteredServiceProvider<Chat> rsp = getServer().getServicesManager().getRegistration(Chat.class);
+        if(rsp == null)
+        	return false;
         chat = rsp.getProvider();
         return chat != null;
     }
 
     private boolean setupPermissions() {
         RegisteredServiceProvider<Permission> rsp = getServer().getServicesManager().getRegistration(Permission.class);
+        if(rsp == null)
+        	return false;
         permissions = rsp.getProvider();
         return permissions != null;
     }
