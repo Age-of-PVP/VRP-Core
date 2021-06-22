@@ -34,13 +34,7 @@ class CinematicCommand(var core: VRPCore) : CommandExecutor {
         } else if (args[0].equals("create", ignoreCase = true)) {
             if (args.size >= 3) {
                 sender.sendMessage(ChatColor.GRAY.toString() + "Starting Creation of " + ChatColor.GREEN + args[1])
-                val tmp = Cinematic()
-                tmp.Name = args[1]
-                tmp.KeyPoints = ArrayList()
-                tmp.Duration = args[2].toInt()
-                tmp.LinkedCinematic = ""
-                tmp.Titles = arrayOf<String>();
-                tmp.Subtitles = arrayOf<String>();
+                val tmp = Cinematic(args[1], args[2].toInt(), ArrayList(), "", arrayOf<String>(), arrayOf<String>())
                 core.CinematicManager.Cinematics!!.add(tmp)
             }
         } else if (args[0].equals("points", ignoreCase = true)) {

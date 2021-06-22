@@ -1,0 +1,14 @@
+---
+name: VRP-Core
+version: 0.1
+authors: [wickedizerd, goldminer931]
+main: VRPCore.VRPCore
+api-version: 1.17
+description: Velocity Role Playing Core Plugin
+depend: [Vault]
+softdepend: [LuckPerms, MVdWPlaceholderAPI, PlaceholderAPI]
+commands:
+  /es:
+  cinematic:
+  forecast:
+  wanted:

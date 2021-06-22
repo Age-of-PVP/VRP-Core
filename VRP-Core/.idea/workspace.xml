@@ -5,20 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39304f1a-83e6-4a98-9e45-5e88f587d776" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/modules/VRP-Core.VRP-Core.main.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/modules/VRP-Core.VRP-Core.test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/TabCompletions/CinematicTabCompleter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Commands/ForecastCommand.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VRP-Core/src/main/plugin.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VRP-Core/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/VRP-Core/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Cinematics/Cinematic.kt" beforeDir="false" afterPath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Cinematics/Cinematic.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Cinematics/CinematicManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Cinematics/CinematicManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Cinematics/MovementHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Cinematics/MovementHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VRP-Core/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/VRP-Core/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Commands/CinematicCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Commands/CinematicCommand.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Commands/EditorStick.kt" beforeDir="false" afterPath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Commands/EditorStick.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Commands/WantedCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Commands/WantedCommand.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Economy/JobPaymentHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Economy/JobPaymentHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Events/EditorStickEvent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Events/EditorStickEvent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Listeners/PlayerJoinListener.kt" beforeDir="false" afterPath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Listeners/PlayerJoinListener.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Models/Job.kt" beforeDir="false" afterPath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Models/Job.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Placeholders/WantedLevelPlaceholder.kt" beforeDir="false" afterPath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Placeholders/WantedLevelPlaceholder.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Runnables/StartupRunnable.kt" beforeDir="false" afterPath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Runnables/StartupRunnable.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Utils/IO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/Utils/IO.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/VRPCore.kt" beforeDir="false" afterPath="$PROJECT_DIR$/VRP-Core/src/main/kotlin/VRPCore.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,9 +35,45 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$/VRP-Core">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="VRP-Core" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="VRP-Core" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="VRP-Core" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="VRP-Core" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build setup" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="VRP-Core" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="shadow" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="VRP-Core" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -63,7 +100,85 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/VRP-Core/lib" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Erik\Desktop\VRP-Core\VRP-Core\VRP-Core\lib" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.VRP-Core [shadowJar]">
+    <configuration name="VRP-Core [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/VRP-Core" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="VRP-Core [shadowJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/VRP-Core" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="shadowJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="VRP-Core [wrapper]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/VRP-Core" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="wrapper" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.VRP-Core [shadowJar]" />
+        <item itemvalue="Gradle.VRP-Core [build]" />
+        <item itemvalue="Gradle.VRP-Core [wrapper]" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

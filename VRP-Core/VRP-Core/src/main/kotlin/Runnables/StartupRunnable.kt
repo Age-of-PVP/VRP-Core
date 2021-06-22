@@ -1,7 +1,7 @@
 package VRPCore.Runnables
 
 import VRPCore.Economy.JobPaymentHandler
-import VRPCore.Listeners.LogonListener
+import VRPCore.Listeners.PlayerJoinListener
 import VRPCore.Utils.WeatherManager
 import VRPCore.VRPCore
 
@@ -14,7 +14,7 @@ class StartupRunnable(private val core: VRPCore) : Runnable {
 
         // Set time to day
         core.server.getWorld("OLD")!!.fullTime = 16299768000L + 18000L
-        core.server.pluginManager.registerEvents(LogonListener(core), core)
+        core.server.pluginManager.registerEvents(PlayerJoinListener(core), core)
         core.registerTasks()
     }
 }

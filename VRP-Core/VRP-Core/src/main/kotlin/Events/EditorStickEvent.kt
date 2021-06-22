@@ -1,8 +1,8 @@
 package VRPCore.Events
 
+import VRPCore.Enums.EditorStickMode
 import VRPCore.VRPCore
 import de.tr7zw.nbtapi.NBTItem
-import jdk.vm.ci.code.Register
 import me.filoghost.chestcommands.api.ChestCommandsAPI
 import org.bukkit.ChatColor
 import org.bukkit.DyeColor
@@ -27,15 +27,15 @@ class EditorStickEvents(var plugin: VRPCore) : Listener {
                 if (nbt.hasKey("isEditorStick")) {
                     if (e.action == Action.LEFT_CLICK_BLOCK) {
                         when (plugin.playerManager.GetPlayer(e.player.uniqueId).StickMode) {
-                            Register.None -> e.player.sendMessage(ChatColor.YELLOW.toString() + "Select a Editor Stick Mode First!")
-                            LightEditor -> {
+                            EditorStickMode.None -> e.player.sendMessage(ChatColor.YELLOW.toString() + "Select a Editor Stick Mode First!")
+                            EditorStickMode.LightEditor -> {
                                 e.player.sendMessage(ChatColor.GREEN.toString() + "Light Editor!")
                                 if (e.clickedBlock!!.type == Material.REDSTONE_LAMP) {
                                     e.player.sendMessage("Added block to array")
-                                    plugin.lightManager.DayNightLamps.add(e.clickedBlock)
+                                    //plugin.lightManager.DayNightLamps.add(e.clickedBlock)
                                 }
                             }
-                            Intersection -> {
+                            EditorStickMode.Intersection -> {
                                 val spawnLocation = e.clickedBlock!!.getRelative(e.blockFace).location
                                 val b = e.clickedBlock!!.world.getBlockAt(spawnLocation)
                                 b.type = Material.BLACK_WALL_BANNER
@@ -50,7 +50,7 @@ class EditorStickEvents(var plugin: VRPCore) : Listener {
                                     b.blockData = blockData
                                 }
                             }
-                            WaypointEditor -> e.player.sendMessage(ChatColor.GREEN.toString() + "Waypoint Editor!")
+                            EditorStickMode.WaypointEditor -> e.player.sendMessage(ChatColor.GREEN.toString() + "Waypoint Editor!")
                         }
                     } else if (e.action == Action.RIGHT_CLICK_AIR || e.action == Action.RIGHT_CLICK_BLOCK) {
                         ChestCommandsAPI.openInternalMenu(e.player, "ESMenu.yml")

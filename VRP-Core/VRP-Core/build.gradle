@@ -1,4 +1,14 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: 'org.yaml', name: 'snakeyaml', version: '1.29'
+    }
+}
+
 plugins {
+    id 'com.github.johnrengelman.shadow' version '7.0.0'
     id 'java'
     id 'org.jetbrains.kotlin.jvm' version '1.4.10'
 }
@@ -26,6 +36,13 @@ repositories {
         url = 'https://repo.extendedclip.com/content/repositories/placeholderapi/'
     }
     maven { url "https://repo.dmulloy2.net/repository/public/" }
+    maven {
+        url 'http://repo.mvdw-software.be/content/groups/public/'
+        allowInsecureProtocol = true
+    }
+    flatDir {
+        dirs 'lib'
+    }
 }
 
 dependencies {
@@ -36,13 +53,15 @@ dependencies {
     compileOnly 'com.github.MilkBowl:VaultAPI:1.7'
     implementation 'de.tr7zw:item-nbt-api-plugin:2.8.0'
     implementation group: 'com.owlike', name: 'genson', version: '1.6'
-    implementation('com.github.Maximvdw:MVdWPlaceholderAPI:2.1.1-SNAPSHOT') {
-        exclude group: 'org.spigotmc', module: 'spigot'
+    implementation('be.maximvdw:MVdWPlaceholderAPI:3.1.1-SNAPSHOT'){
+        exclude group: 'org.spigotmc', module: "spigot"
     }
     compileOnly 'me.clip:placeholderapi:2.10.9'
     implementation group: 'org.reflections', name: 'reflections', version: '0.9.5-RC2'
     testImplementation group: 'org.objenesis', name: 'objenesis', version: '3.2'
     compileOnly group: "com.comphenix.protocol", name: "ProtocolLib", version: "4.6.0";
+    implementation name: 'CommandHandler'
+    implementation 'me.filoghost.chestcommands:chestcommands-api:4.0.3'
 }
 
 test {

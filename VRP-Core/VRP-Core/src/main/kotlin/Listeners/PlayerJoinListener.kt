@@ -1,7 +1,6 @@
 package VRPCore.Listeners
 
 import VRPCore.Models.Job
-import VRPCore.Models.Player
 import VRPCore.Models.VRPlayer
 import VRPCore.VRPCore
 import org.bukkit.ChatColor
@@ -16,7 +15,7 @@ class PlayerJoinListener(private val core: VRPCore) : Listener {
         val player: VRPlayer = core.playerManager.GetPlayer(event.player.uniqueId)
         player.Job = object : Job() {
             init {
-                weeklySalary = 1480
+                weeklySalary = 1480.0
                 jobName = "Cop"
             }
         }
