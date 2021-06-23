@@ -17,7 +17,7 @@ import java.lang.Exception
 import java.util.ArrayList
 
 class CinematicManager(private val core: VRPCore) : IStorable {
-    var Cinematics: ArrayList<Cinematic>? = null
+    var Cinematics: ArrayList<Cinematic>? = arrayListOf<Cinematic>()
     var gson = GsonBuilder().setPrettyPrinting().create()
     private val CinematicsDirectory = "./plugins/VRPCore/Cinematics/cinematics.json"
     private val CinematicsDir = "./plugins/VRPCore/Cinematics/"

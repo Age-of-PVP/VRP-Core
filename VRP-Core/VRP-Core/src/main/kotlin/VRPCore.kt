@@ -36,12 +36,17 @@ class VRPCore : JavaPlugin() {
     var economy: Economy? = null
     var permissions: Permission? = null
     var chat: Chat? = null
-    var TestString = "Hello World"
     var DateManagerHandle = 0
     var WeatherChangeHandle = -1
     private val storables: ArrayList<IStorable> = ArrayList<IStorable>()
 
     override fun onEnable() {
+        registerCmds()
+        commandHandler = CommandHandler<VRPCore>(this, "VRPCore.ScaffoldedCommands")
+
+        registerStorables();
+        server.scheduler.scheduleSyncDelayedTask(this, StartupRunnable(this), 0);
+
         if (!setupEconomy()) {
             this.getLogger().severe("Disabled due to no Vault dependency found!")
             this.getLogger().severe("[VRP] BYPASSING VAULT! IGNORE ABOVE MESSAGE. FIX THIS!")
@@ -49,8 +54,8 @@ class VRPCore : JavaPlugin() {
             //return;
         }
 
-        // Featherboard Placeholders
-        if (Bukkit.getPluginManager().isPluginEnabled("MVdWPlaceholderAPI") && false) { // @TODO: <- REMOVE THE && FALSE
+        // Feather board Placeholders
+        /*if (Bukkit.getPluginManager().isPluginEnabled("MVdWPlaceholderAPI")) {
             PlaceholderAPI.registerPlaceholder(this, "wantedString") { e ->
                 val player: VRPlayer = playerManager.GetPlayer(e.player.uniqueId)
                 player.wantedDisplay
@@ -70,18 +75,14 @@ class VRPCore : JavaPlugin() {
             }
         }
 
-        // @TODO: REMOVE COMMENTS
         // TAB Placeholders
-        //if(Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI")) {
-        //	new WantedLevelPlaceholder(this).register();
-        //}
-        if (!setupChat()) getLogger().severe("Failed to setup chat")
-        if (!setupPermissions()) getLogger().severe("Failed to permissions chat")
-        commandHandler = CommandHandler<VRPCore>(this, "VRPCore.ScaffoldedCommands")
-        registerCmds()
-        registerStorables()
-        val scheduler: BukkitScheduler = getServer().getScheduler()
-        scheduler.scheduleSyncDelayedTask(this, StartupRunnable(this), 0)
+        if(Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI")) {
+        	new WantedLevelPlaceholder(this).register();
+        }
+        */
+
+        if (!setupChat()) logger.severe("Failed to setup chat")
+        if (!setupPermissions()) logger.severe("Failed to permissions chat")
     }
 
     private fun registerStorables() {
@@ -108,17 +109,17 @@ class VRPCore : JavaPlugin() {
         val rsp: RegisteredServiceProvider<Economy> =
             server.servicesManager.getRegistration(Economy::class.java) as RegisteredServiceProvider<Economy>
         if (rsp == null) {
-            this.getLogger().severe("Failed to obtain instance of RegisteredServiceProvider<Economy> from Vault!")
+            this.logger.severe("Failed to obtain instance of RegisteredServiceProvider<Economy> from Vault!")
             return false
         }
-        economy = rsp.getProvider()
+        economy = rsp.provider
         return economy != null
     }
 
     private fun setupChat(): Boolean {
         val rsp: RegisteredServiceProvider<Chat> = server.servicesManager.getRegistration(Chat::class.java)
             ?: return false
-        chat = rsp.getProvider()
+        chat = rsp.provider
         return chat != null
     }
 
@@ -126,11 +127,11 @@ class VRPCore : JavaPlugin() {
         val rsp: RegisteredServiceProvider<Permission> =
             server.servicesManager.getRegistration(Permission::class.java)
                 ?: return false
-        permissions = rsp.getProvider()
+        permissions = rsp.provider
         return permissions != null
     }
 
-    fun registerCmds() {
+    private fun registerCmds() {
         this.getCommand("/es")!!.setExecutor(EditorStick(this))
         server.pluginManager.registerEvents(EditorStickEvents(this), this)
         this.getCommand("cinematic")!!.tabCompleter = CinematicTabCompleter(this)

@@ -47,7 +47,7 @@ class WantedLevelPlaceholder(var core: VRPCore) : PlaceholderExpansion() {
             return _player.Job!!.jobName;
         }
         return if (identifier == "salary") {
-            java.lang.Double.toString(_player.Job!!.weeklySalary);
+            _player.Job!!.weeklySalary.toString();
         } else null
 
         // We return null if an invalid placeholder (f.e. %someplugin_placeholder3%)
