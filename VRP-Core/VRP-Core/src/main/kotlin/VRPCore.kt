@@ -42,7 +42,7 @@ class VRPCore : JavaPlugin() {
 
     override fun onEnable() {
         registerCmds()
-        commandHandler = CommandHandler<VRPCore>(this, "VRPCore.ScaffoldedCommands")
+        commandHandler = CommandHandler<VRPCore>(this, "VRPCore.Commands")
 
         registerStorables();
         server.scheduler.scheduleSyncDelayedTask(this, StartupRunnable(this), 0);

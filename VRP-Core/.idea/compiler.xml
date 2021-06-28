@@ -2,8 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="VRP-Core.VRP-Core.main~1" target="16" />
-      <module name="VRP-Core.VRP-Core.test~1" target="16" />
+      <module name="VRP-Core.VRP-Core.main" target="16" />
+      <module name="VRP-Core.VRP-Core.test" target="16" />
     </bytecodeTargetLevel>
   </component>
 </project>

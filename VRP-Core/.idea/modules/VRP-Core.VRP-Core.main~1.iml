@@ -10,20 +10,22 @@
     </content>
     <orderEntry type="jdk" jdkName="15" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Gradle: org.reflections:reflections:0.9.11" level="project" />
+    <orderEntry type="library" name="Gradle: org.objenesis:objenesis:3.2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.spigotmc:spigot-api:1.17-R0.1-SNAPSHOT" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: com.github.MilkBowl:VaultAPI:1.7" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: me.clip:placeholderapi:2.10.9" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: com.comphenix.protocol:ProtocolLib:4.6.0" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.4.10" level="project" />
     <orderEntry type="library" name="Gradle: de.tr7zw:item-nbt-api-plugin:2.8.0" level="project" />
     <orderEntry type="library" name="Gradle: com.owlike:genson:1.6" level="project" />
     <orderEntry type="library" name="Gradle: be.maximvdw:MVdWPlaceholderAPI:3.1.1-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Gradle: org.reflections:reflections:0.9.5-RC2" level="project" />
+    <orderEntry type="library" name="Gradle: :PlaceholderAPI-2.10.10-DEV:" level="project" />
     <orderEntry type="library" name="Gradle: :CommandHandler:" level="project" />
     <orderEntry type="library" name="Gradle: me.filoghost.chestcommands:chestcommands-api:4.0.3" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: commons-lang:commons-lang:2.6" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Gradle: net.md-5:bungeecord-chat:1.16-R0.4" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: com.google.guava:guava:21.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.javassist:javassist:3.21.0-GA" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: net.md-5:bungeecord-chat:1.16-R0.4" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: commons-lang:commons-lang:2.6" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: com.google.code.gson:gson:2.8.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.yaml:snakeyaml:1.28" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.bukkit:bukkit:1.13.1-R0.1-SNAPSHOT" level="project" />
@@ -32,17 +34,9 @@
     <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
     <orderEntry type="library" name="Gradle: be.maximvdw:MVdWUpdater:1.6.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Gradle: org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.1" level="project" />
-    <orderEntry type="library" name="Gradle: com.google.collections:google-collections:1.0" level="project" />
-    <orderEntry type="library" name="Gradle: javassist:javassist:3.8.0.GA" level="project" />
-    <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.5.6" level="project" />
-    <orderEntry type="library" name="Gradle: dom4j:dom4j:1.6" level="project" />
-    <orderEntry type="library" name="Gradle: javax.servlet:servlet-api:2.5" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: com.googlecode.json-simple:json-simple:1.1.1" level="project" />
-    <orderEntry type="library" name="Gradle: xml-apis:xml-apis:1.0.b2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: junit:junit:4.10" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.hamcrest:hamcrest-core:1.1" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: ch.qos.logback:logback-classic:0.9.9" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.google.code.gson:gson:1.4" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Gradle: ch.qos.logback:logback-core:0.9.9" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.google.guava:guava:20.0" level="project" />
   </component>
 </module>

@@ -10,7 +10,7 @@ import org.bukkit.entity.Player
 class WantedCommand(private val core: VRPCore) : CommandExecutor {
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<String>): Boolean {
         val player = sender as Player
-        if (args.size >= 1) {
+        if (args.isNotEmpty()) {
             if (args[0].equals("set", ignoreCase = true)) {
                 if (args.size >= 2) {
                     val _player: VRPlayer = core.playerManager.GetPlayer(player.uniqueId)

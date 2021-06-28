@@ -1,15 +1,15 @@
-package Commands
+package VRPCore.Commands
 
 import VRPCore.VRPCore
 import org.bukkit.ChatColor
 import org.bukkit.command.CommandSender
-import org.velocity.CommandHandler.annotations.Argument
-import org.velocity.CommandHandler.annotations.Command
 import org.velocity.CommandHandler.models.CommandArg
 import org.velocity.CommandHandler.models.CommandBase
 import VRPCore.Enums.*;
+import org.velocity.CommandHandler.annotations.CHArgument
+import org.velocity.CommandHandler.annotations.CHCommand
 
-@Command(Name = "forecast")
+@CHCommand(Name = "forecast")
 class ForecastCommand : CommandBase<VRPCore?> {
     var core: VRPCore? = null
 
@@ -42,7 +42,7 @@ class ForecastCommand : CommandBase<VRPCore?> {
         return true
     }
 
-    @Argument(Name = "set", Index = 0, Permission = "vrpcore.forecast.set")
+    @CHArgument(Name = "set", Index = 0, Permission = "vrpcore.forecast.set")
     inner class ForecastOverride : CommandArg {
         override fun execute(
             sender: CommandSender,
